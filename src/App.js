@@ -2,7 +2,7 @@ import "./styles.css";
 import ProductList from "./ProductList";
 import Cart from "./Cart";
 import WishList from "./WishList";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, NavLink } from "react-router-dom";
 
 export default function App() {
   return (
@@ -10,15 +10,34 @@ export default function App() {
       <header>
         <div className="heading">BuyAtOnce</div>
         <nav>
-          <ul class="nav-bar__list">
+          <ul className="nav-bar__list">
             <li className="nav-bar__list__item">
-              <Link to="/">Products</Link>
+              <NavLink
+                end
+                className="nav-bar__list__link"
+                activeStyle={{ fontWeight: "bold" }}
+                to="/"
+              >
+                Products
+              </NavLink>
             </li>
             <li className="nav-bar__list__item">
-              <Link to="cart">Cart</Link>
+              <NavLink
+                className="nav-bar__list__link"
+                activeStyle={{ fontWeight: "bold" }}
+                to="cart"
+              >
+                Cart
+              </NavLink>
             </li>
             <li className="nav-bar__list__item">
-              <Link to="wish-list">Wish list</Link>
+              <NavLink
+                className="nav-bar__list__link"
+                activeStyle={{ fontWeight: "bold" }}
+                to="wish-list"
+              >
+                Wish list
+              </NavLink>
             </li>
           </ul>
         </nav>
