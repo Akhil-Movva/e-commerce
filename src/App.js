@@ -1,41 +1,33 @@
 import "./styles.css";
-import { useState } from "react";
-import { ProductList } from "./ProductList";
-import { Cart } from "./Cart";
-import { WishList } from "./WishList";
+import ProductList from "./ProductList";
+import Cart from "./Cart";
+import WishList from "./WishList";
+import { Routes, Route, Link } from "react-router-dom";
 
 export default function App() {
-  const [route, setRoute] = useState("products");
-
   return (
     <div className="App">
       <header>
         <div className="heading">BuyAtOnce</div>
+        <nav>
+          <ul class="nav-bar__list">
+            <li className="nav-bar__list__item">
+              <Link to="/">Products</Link>
+            </li>
+            <li className="nav-bar__list__item">
+              <Link to="cart">Cart</Link>
+            </li>
+            <li className="nav-bar__list__item">
+              <Link to="wish-list">Wish list</Link>
+            </li>
+          </ul>
+        </nav>
       </header>
-      <div className="route-container">
-        <button
-          onClick={() => setRoute("products")}
-          className="button button-specific"
-        >
-          Products
-        </button>
-        <button
-          onClick={() => setRoute("cart")}
-          className="button button-specific"
-        >
-          Cart
-        </button>
-        <button
-          onClick={() => setRoute("wishlist")}
-          className="button button-specific"
-        >
-          Wish List
-        </button>
-      </div>
-
-      {route === "products" && <ProductList />}
-      {route === "cart" && <Cart />}
-      {route === "wishlist" && <WishList />}
+      <Routes>
+        <Route path="/" element={<ProductList />} />
+        <Route path="cart" element={<Cart />} />
+        <Route path="wish-list" element={<WishList />} />
+      </Routes>
     </div>
   );
 }

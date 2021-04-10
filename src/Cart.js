@@ -1,6 +1,7 @@
+import React from "react";
 import { useProduct } from "./ProductContext";
 
-export function Cart() {
+export default function Cart() {
   const {
     state: { cart },
     dispatch

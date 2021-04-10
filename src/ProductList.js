@@ -2,8 +2,9 @@ import { useProduct } from "./ProductContext";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Product } from "./Product.js";
+import React from "react";
 
-export function ProductList() {
+export default function ProductList() {
   const {
     state: {
       noOutOfStock,
@@ -15,13 +16,13 @@ export function ProductList() {
     dispatch
   } = useProduct();
 
-  const [loader,setLoader]=useState(false);
+  const [loader, setLoader] = useState(false);
 
   const [searchText, setSearchText] = useState("");
 
   async function fetchDataFromServer() {
     try {
-       setLoader(true);
+      setLoader(true);
       const {
         data: { products: dataFromServer }
       } = await axios.get("/api/products");

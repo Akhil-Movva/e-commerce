@@ -1,6 +1,7 @@
+import React from "react";
 import { useProduct } from "./ProductContext";
 
-export function WishList() {
+export default function WishList() {
   const {
     state: { wishList },
     dispatch
