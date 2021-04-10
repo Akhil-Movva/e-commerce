@@ -1,0 +1,134 @@
+@import "https://assortment-ui.netlify.app/styles.css";
+
+:root {
+  --bg-color: #d1e6ac;
+  --text-color: #2e4511;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.route-container {
+  display: flex;
+  justify-content: center;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color);
+  padding: 1rem;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
+.button,
+.card__button,
+.search-button {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border-color: var(--text-color);
+}
+
+.button-specific {
+  margin: 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 40%;
+  align-items: center;
+  border: 0.1rem solid black;
+  margin: 3rem;
+  padding-bottom: 1rem;
+  border-radius: 0.2rem;
+  position: relative;
+}
+
+.container-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.img-responsive {
+  width: 100%;
+}
+
+.card__button {
+  border-radius: 2rem;
+  border: 0.125rem solid black;
+  cursor: pointer;
+}
+
+.card__button--product {
+  margin-top: 0.5rem;
+}
+.card__quantity {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  justify-content: center;
+}
+
+.card__button--quantity {
+  margin: 0 0.2rem;
+}
+
+.search-button {
+  cursor: pointer;
+  padding: 0.4rem 0.1rem;
+  border-width: 0.1rem;
+  border-style: solid;
+  border-radius: 0.2rem;
+}
+
+.search-box {
+  width: 40%;
+  height: 4vh;
+  border: 0.1rem solid var(--text-color);
+  border-radius: 0.2rem;
+  margin-right: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.modal {
+  position: absolute;
+  bottom: 1rem;
+  width: 50%;
+  background-color: white;
+}
+
+.modal__title {
+  padding-left: 0;
+}
+
+.modal__text {
+  text-align: center;
+}
+
+.modal__close {
+  top: 0rem;
+  right: 0rem;
+}
+
+
+.sort-container__radio-container{
+  display:flex;
+  justify-content:center;
+  flex-wrap: wrap;
+    
+}
+
+.sort-container{
+  border:0.125rem solid black;
+  width:30%;
+  margin: 1rem auto;
+  padding:0.5rem 0;
+}
