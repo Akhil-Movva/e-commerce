@@ -25,7 +25,9 @@ export default function ProductList() {
       setLoader(true);
       const {
         data: { products: dataFromServer }
-      } = await axios.get("/api/products");
+      } = await axios.get(
+        "https://e-commerce-api-server.herokuapp.com/products"
+      );
       setLoader(false);
       dispatch({ type: "LOAD_PRODUCTS", payload: dataFromServer });
     } catch (error) {
